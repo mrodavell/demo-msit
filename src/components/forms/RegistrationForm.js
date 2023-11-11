@@ -1,6 +1,7 @@
 import { View } from "react-native";
 import { TextInput, Button, Text } from "react-native-paper";
-export default function LoginForm(props) {
+
+export default function RegistrationForm() {
   return (
     <View
       style={{
@@ -9,35 +10,28 @@ export default function LoginForm(props) {
         marginTop: 25,
       }}
     >
+      <View style={{ alignItems: "center", marginBottom: 10 }}>
+        <Text variant="headlineSmall">Registration</Text>
+      </View>
       <TextInput label="Email" />
       <TextInput label="Password" style={{ marginTop: 10 }} secureTextEntry />
+      <TextInput label="Re-type Password" style={{ marginTop: 10 }} secureTextEntry />
       <Button
         mode="contained"
         labelStyle={{ fontSize: 18 }}
         style={{ borderRadius: 7, marginTop: 10 }}
-        icon="login"
+        icon="account-check"
       >
-        Login
+        Register
       </Button>
       <Button
         mode="contained"
         labelStyle={{ fontSize: 18 }}
         style={{ borderRadius: 7, marginTop: 5 }}
-        icon="account-plus"
+        icon="arrow-left"
       >
-        Sign up
-      </Button>
-      <View style={{ alignItems: "center", marginTop: 10 }}>
-        <Text variant="labelLarge">or</Text>
-      </View>
-      <Button
-        mode="contained-tonal"
-        labelStyle={{ fontSize: 18 }}
-        style={{ borderRadius: 7, marginTop: 10 }}
-        icon="lock"
-      >
-        Recover Access
-      </Button>
+        Go Back
+      </Button> 
     </View>
   );
 }

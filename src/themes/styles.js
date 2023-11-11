@@ -1,9 +1,8 @@
 const styles = {
-  textContainer: {
-    backgroundColor: "red",
+  textContainer: { 
     padding: 10,
     marginTop: 5,
-    color: "#FFF",
+    color: "#000",
   },
 };
 

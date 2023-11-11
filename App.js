@@ -1,20 +1,28 @@
 import { StatusBar } from "expo-status-bar";
-import { Text } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import {
+  MD3LightTheme as DefaultTheme,
+  PaperProvider,
+} from "react-native-paper";
 import LoginScreen from "./src/components/screens/LoginScreen";
+import RegistrationScreen from "./src/components/screens/RegistrationScreen";
+
+const theme = {
+  ...DefaultTheme,
+  colors: {
+    ...DefaultTheme.colors,
+    primary: "tomato",
+    secondary: "yellow",
+  },
+};
 
 export default function App() {
   return (
-    <SafeAreaView
-      style={{
-        flex: 1,
-        borderWidth: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <StatusBar style="auto" />
-      <LoginScreen />
-    </SafeAreaView>
+    <PaperProvider theme={theme}>
+      <SafeAreaView style={{ flex: 1 }}>
+        <StatusBar style="auto" />
+        <RegistrationScreen />
+      </SafeAreaView>
+    </PaperProvider>
   );
 }

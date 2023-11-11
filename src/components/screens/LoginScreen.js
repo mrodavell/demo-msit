@@ -4,7 +4,7 @@ import LoginForm from "../forms/LoginForm";
 
 export default function LoginScreen(props) {
   return (
-    <View>  
+    <View style={{ flex: 1, justifyContent: "center" }}>
       <Header />
       <LoginForm {...props} />
     </View>
