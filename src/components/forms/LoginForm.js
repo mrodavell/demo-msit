@@ -1,6 +1,7 @@
 import { View } from "react-native";
 import { TextInput, Button, Text } from "react-native-paper";
-export default function LoginForm(props) {
+
+export default function LoginForm({ navigation }) {
   return (
     <View
       style={{
@@ -24,6 +25,7 @@ export default function LoginForm(props) {
         labelStyle={{ fontSize: 18 }}
         style={{ borderRadius: 7, marginTop: 5 }}
         icon="account-plus"
+        onPress={() => navigation.navigate("Registration")}
       >
         Sign up
       </Button>

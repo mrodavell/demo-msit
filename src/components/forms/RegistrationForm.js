@@ -1,7 +1,7 @@
 import { View } from "react-native";
 import { TextInput, Button, Text } from "react-native-paper";
 
-export default function RegistrationForm() {
+export default function RegistrationForm({ navigation }) {
   return (
     <View
       style={{
@@ -15,7 +15,11 @@ export default function RegistrationForm() {
       </View>
       <TextInput label="Email" />
       <TextInput label="Password" style={{ marginTop: 10 }} secureTextEntry />
-      <TextInput label="Re-type Password" style={{ marginTop: 10 }} secureTextEntry />
+      <TextInput
+        label="Re-type Password"
+        style={{ marginTop: 10 }}
+        secureTextEntry
+      />
       <Button
         mode="contained"
         labelStyle={{ fontSize: 18 }}
@@ -29,9 +33,10 @@ export default function RegistrationForm() {
         labelStyle={{ fontSize: 18 }}
         style={{ borderRadius: 7, marginTop: 5 }}
         icon="arrow-left"
+        onPress={() => navigation.pop()}
       >
         Go Back
-      </Button> 
+      </Button>
     </View>
   );
 }
